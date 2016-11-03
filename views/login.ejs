@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>播客管理平台</title>
+	<script src="/javascripts/jquery-1.7.2.min.js"></script>
+	<script src="/javascripts/login.js"></script>
+    <link rel='stylesheet' href='/stylesheets/login.css' />	
+</head>
+<body>
+	<section id="container">
+		<!-- 头部 -->
+		<header >
+			<section class="content flex">
+				<div class="logo">
+					<a href="/">
+						<img src="./picture/a93351efc9fc1d11cb4c5b7e6a762700-newlogo.png" alt="">
+					</a>
+				</div>
+				<ul class="nav flex">
+					<li><a href="/">首页</a></li>
+					<li><a href="/login">播客入口</a></li>
+					<li><a href="#">下载客户端</a></li>
+				</ul>
+			</section>
+		</header>
+		<!-- 主体 -->
+		<section id="main">
+			<p class="title">播客管理平台</p>
+			<div class="border"></div>
+			<section class="content flex">
+				<section id="mainbox">
+					<form class="loginBox">
+						<div class="number box flex">
+							<span>账号:</span>
+							<input type="text" id="idNumber" name="number">
+						</div>
+						<div class="pass box flex">
+							<span>密码:</span>
+							<input type="password" id="passWord" name="password">
+						</div>
+						<a href="#" class="forgotLink flex">忘记密码？</a>
+						<div class=" clearfix"></div>
+						<div class="tips">
+							<span class="errorMessage">帐号或密码错误,请检查后重新输入</span>
+						</div>
+						<div class="btnsBox flex">
+							<a class="loginBtn" id="login_Btn">登录</a>
+							<a href="/register" class="regLink uline">注册</a>
+							<a href="#" class="signChangeLink uline">邮箱登录</a>
+						</div>
+						<div class="thirdPartyBtn flex">
+							<a href="#" class="qqBtn btn flex">
+								<i><span></span></i>
+								QQ账号登录
+							</a>
+							<a href="#" class="weiboBtn btn flex">
+								<i><span></span></i>
+								微博账号登录
+							</a>
+						</div>
+					</form>
+				</section>
+				<aside id="side">
+					<p class="stitle">公告栏</p>
+					<ul>
+						<li>
+							<span>.</span>
+							<a href="#">夺榜首，得靓号，给你一个机会定制专属波段号</a>
+						</li>
+						<li>
+							<span>.</span>
+							<a href="#">​“羊城十大网络文明形象大使”荔枝FM选送通道开始报名啦</a>
+						</li>
+						<li>
+							<span>.</span>
+							<a href="#">关于荔枝FM直播平台的内容审核公告</a>
+						</li>
+						<a href="#" class="more">查看更多>></a>
+					</ul>
+					<p class="stitle QAtitle">Q&A</p>
+					<ul>
+						<li>
+							<span>.</span>
+							<a href="#">荔枝FM使用Q&A（持续更新）</a>
+						</li>
+						<li>
+							<span>.</span>
+							<a href="#">如何使用专题征集投稿？</a>
+						</li>
+						<li>
+							<span>.</span>
+							<a href="#">录制节目中疑难答复</a>
+						</li>
+						<li>
+							<span>.</span>
+							<a href="#">如何录制节目？</a>
+						</li>
+						
+					</ul>
+				</aside>	
+			</section>
+		</section>
+		<!-- 页脚 -->
+		<footer>
+			<section class="fcontent flex">
+				<div class="left">
+					粤网文[2013]0757-157号 粤ICP备12026999号-5 穗公网安备44010650010105号
+					<br>
+        		    广州荔支网络技术有限公司 2010-2016© All Rights Reserved.
+				</div>
+				<div class="right">
+					<a href="#">荔枝FM</a>
+					<a href="#">博客</a>
+					<a href="#">动态</a>
+					<a href="#">关于我们</a>
+					<a href="#">加入我们</a>
+				</div>
+			</section>
+		</footer>
+	</section>
+</body>
+</html>

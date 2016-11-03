@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>荔枝FM,人人都是播客_听音乐相声评书脱口秀鬼故事广播剧网络电台</title>
+	<script src="/javascripts/jquery-1.7.2.min.js"></script>
+	<script src="/javascripts/play.js"></script>
+    <link rel='stylesheet' href='/stylesheets/play.css' />	
+</head>
+<body>
+	<div class="wrap box-page">
+        <header class="header">
+            <div class="content clearfix">
+                <div class="logo left">
+                    <a href="/">
+                        <img style="margin-top:2px;" src="picture/a93351efc9fc1d11cb4c5b7e6a762700-newlogo.png" alt="荔枝fm">
+                    </a>
+                </div>       
+            </div>
+        </header>
+        <section id="box" class="box">
+            <div class="content">
+            	
+				<!-- 左部 -->
+                <div class="box-side-box-wrap">
+                	<div class="jspContainer">
+                		<div class="jspPane">
+                			<div class="box-side-box">
+		                        <div id="playlist-btn" class="playlist-btn">
+		                            <i class="playlist-icon"></i>正在播放
+		                        </div>
+		                        <div id="history-list-btn" class="history-list-btn">
+		                            <!-- <i class="history-list-icon"></i>播放历史 -->
+		                        </div>
+		                        <div class="divider"></div>
+		                        <a target="_blank" href="/about/download.html">
+		                            <img src="picture/downloadapp-banner2.png" alt="下载荔枝FM客户端">
+		                        </a>
+		                        <div class="downloadLink clearfix">
+		                            <a class="iosDownBtn" href="#"></a>
+		                            <a class="androidDownBtn" href="#"></a>
+		                            <a class="ipadDownBtn" href="#"></a>
+		                            <a target="_blank" href="http://www.lizhi.fm/download/wp" class="winPhoneDownBtn"></a>
+		                        </div>
+		                    </div>
+                		</div>
+                	</div>
+                    
+                </div>
+                
+				<!-- 中部 -->
+                <div class="box-main">
+                    <div id="playlist" class="playlist">
+                        <div class="playlist-item playlist-item-header">
+                            <button class="playlist-item-header-btn">清空播放列表</button>
+                            <div class="playlist-item-content">
+                                <span class="playlist-item-name">节目</span>
+                                <span class="playlist-item-user-name">主播</span>
+                                <span class="playlist-item-radio-name">播客</span>
+                            </div>
+                        </div>
+                        <ul class="ui-sortable">
+							<li>
+                                <div class="playlist-item">
+                                    <span class="playlist-item-index">1</span>
+                                    <div class="playlist-item-content">
+                                        <span class="playlist-item-name">伊藤サチコ - いつも何度でも</span>
+                                        <span class="playlist-item-user-name">小ty</span>
+                                        <span class="playlist-item-radio-name">讲情话的不可能小姐</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="playlist-item">
+                                    <span class="playlist-item-index">2</span>
+                                    <div class="playlist-item-content">
+                                        <span class="playlist-item-name">黒石ひとみ - Stories</span>
+                                        <span class="playlist-item-user-name">小ty</span>
+                                        <span class="playlist-item-radio-name">讲情话的不可能小姐</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="playlist-item">
+                                    <span class="playlist-item-index">3</span>
+                                    <div class="playlist-item-content">
+                                        <span class="playlist-item-name">茅野愛衣,戸松遥,早見沙織 - secret base ~君がくれたもの~ (10 years after Ver.)</span>
+                                        <span class="playlist-item-user-name">小ty</span>
+                                        <span class="playlist-item-radio-name">讲情话的不可能小姐</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+				
+            	<!-- 右部 -->
+                <div class="box-audio-detail-wrap">
+	                <div class="jspContainer">
+	                	<div class="jspPane">
+	                		<div class="box-audio-detail" id="box-audio-detail">
+	                			<a href="#">
+	                				<img class="box-audio-detail-img" src="picture/12002727960291074_320x320.jpg" alt="">
+	                			</a>
+	                			<h2 class="box-audio-detail-title">
+	                				<a href="#">讲情话的不可能小姐</a>
+	                			</h2>
+	                			<h3 class="box-audio-detail-subtitle">
+	                				<a href="#">FM42936</a>
+	                			</h3>
+	                			<p class="box-audio-detail-stats">       		
+									节目 248   &nbsp;&nbsp;&nbsp;
+									播放量 1409万
+	                			</p>	
+								如果你只是心里话需要有人听我给你一个干净的地方 
+								文字音乐来源于网络版权归属原作者
+	                    	</div>
+	                	</div>
+	                </div>                                
+                </div>
+            </div>
+
+        </section>
+
+		<!-- 控制台 -->
+        <div class="controller-box">
+            <div class="content">
+                <div class="controller-box-ctrl">
+                    <i class="controller-prev" ></i>
+                    <i class="controller-play" ></i>
+                    <i class="controller-next" ></i>
+                    <i id="controller-repeater" class="controller-repeater"></i>
+                </div>
+                <div class="controller-box-volume">
+                    <p class="current-audio-title">&nbsp;</p>
+                    <i class="controller-volume-icon"></i>
+                    <div class="rangeslider-wrap">
+                        <div class="rangeslider" id="controller-volume">
+                            <div class="rangeslider__fill" style="width: 0px;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="controller-box-position">
+                    <p class="current-audio-title" id="current-audio-title">&nbsp;</p>
+                    <div class="rangeslider-wrap">
+                        <div class="rangeslider" id="controller-position">
+                            <div class="rangeslider__fill" style="width: 0px;"></div>
+                            <div class="rangeslider__handle" style="left: 0px;"></div>
+                            <div class="rangeslider__cache" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                    <div id="position" class="controller-position">00'00"</div>
+                    <div id="duration" class="controller-duration">00'00"</div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+	<audio src="/media/伊藤サチコ - いつも何度でも.mp3" autoplay >
+		对不起,您的破浏览器没有这么高级的功能,请您及时更新
+	</audio>
+</div>
+
+</body>
+</html>

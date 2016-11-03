@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>播客管理平台</title>
+	<script src="/javascripts/jquery-1.7.2.min.js"></script>
+	<script src="/javascripts/register.js"></script>
+    <link rel='stylesheet' href='/stylesheets/register.css' />	
+</head>
+<body>
+	<section id="container">
+		<!-- 头部 -->
+		<header >
+			<section class="content flex">
+				<div class="logo">
+					<a href="/">
+						<img src="./picture/a93351efc9fc1d11cb4c5b7e6a762700-newlogo.png" alt="">
+					</a>
+				</div>
+				<ul class="nav flex">
+					<li><a href="/">首页</a></li>
+					<li><a href="/login">播客入口</a></li>
+					<li><a href="#">下载客户端</a></li>
+				</ul>
+			</section>
+		</header>
+		<!-- 主体 -->
+		<section id="main">
+
+			<p class="title">播客管理平台</p>
+			<div class="border"></div>
+			<p class="prog">
+				使用荔枝FM节目管理平台可以享受无限量的上传空间，
+				<br>
+				 随时上传你的节目，并发布到各大平台，让你的作品给更多人听到！
+
+			</p>
+			<br>
+			
+				<div>
+					<div class="upImg">
+						<img src="<%= src %>" alt="" class="tImage">
+						<span class="avatarMask"></span>
+					</div>
+				</div>
+
+				<div>				
+					<form action="/upload" method="post" enctype="multipart/form-data" id="upForm">
+						<div class="upfile">							
+							<label for="upload">
+								<i class="plus"></i>
+								 选择头像
+								<input type="file" id="upload" style="display:none" name="upfile">
+							</label>						
+						</div>
+						<div class="upfile">							
+							<label for="upSub">
+								开始上传
+								<input type="submit" id="upSub" style="display:none">
+							</label>							
+						</div>
+					</form>
+				</div>
+
+				<span class="upload_info">文件最大5M，支持JPG、GIF、PNG格式。建议上传尺寸为640*640的图片。</span>
+				<div class="border twoe"></div>
+			<form id="upRegi">	
+				<div class="number box flex">
+					<span>账号:</span>
+					<input type="text" id="idNumber" name="number" placeholder="以字母开头的6到10位数字或字母">
+					<span class="error">您输入的账号不符合规则，请重新输入</span>
+					<span class="true">输入正确</span>
+				</div>
+				<div class="name box flex">
+					<span>昵称:</span>
+					<input type="text" id="userName" name="userName" placeholder="昵称不能为空">
+					<span class="error" style="right:-7rem;">昵称不能为空</span>
+					<span class="true">输入正确</span>
+				</div>
+				<div class="pass box flex">
+					<span>输入密码:</span>
+					<input type="password" id="passWord" name="password" placeholder="6到16位数字或字母">
+					<span class="error">您输入的密码不符合规则，请重新输入</span>
+					<span class="true">输入正确</span>
+				</div>
+				<div class="confirm box flex">
+					<span>确认密码:</span>
+					<input type="password" id="confirm" name="confirm" placeholder="6到16位数字或字母">
+					<span class="error">您输入的密码与上次不符，请重新确认</span>
+					<span class="true">输入正确</span>
+				</div>
+				<div class="genderbox">
+					<span>性别：</span>
+					<input type="radio" name="sex" id="man" value="0" checked="checked">
+					<label for="man">男</label>
+					&nbsp;&nbsp;
+					<input type="radio" name="sex" id="woman" value="1">
+					<label for="woman">女</label>
+				</div>
+				<div class="regTerms">
+					<input type="checkbox" checked="check" class="check_terms">
+					<span>我已阅读并接受</span>
+					<a href="#" class="redText">《信息存储空间服务协议》</a>
+					<span>，且以上信息真实无误</span>
+				</div>
+				<a id="submit" type="submit">确认注册</a>
+
+			</form>
+		</section>
+		<!-- 页脚 -->
+		<footer>
+			<section class="fcontent flex">
+				<div class="left">
+					粤网文[2013]0757-157号 粤ICP备12026999号-5 穗公网安备44010650010105号
+					<br>
+        		    广州荔支网络技术有限公司 2010-2016© All Rights Reserved.
+				</div>
+				<div class="right">
+					<a href="#">荔枝FM</a>
+					<a href="#">博客</a>
+					<a href="#">动态</a>
+					<a href="#">关于我们</a>
+					<a href="#">加入我们</a>
+				</div>
+			</section>
+		</footer>
+	</section>
+</body>
+</html>

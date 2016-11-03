@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>荔枝FM,人人都是播客_听音乐相声评书脱口秀鬼故事广播剧网络电台</title>
+	<script src="/javascripts/jquery-1.7.2.min.js"></script>
+	<script src="/javascripts/index.js"></script>
+    <link rel='stylesheet' href='/stylesheets/index.css' />	
+
+</head> 
+<body>
+	<div id="container">
+		<!-- 头部 -->
+		<header class="flex">
+			<section class="content flex">
+				<div class="logo">
+					<a href="#">
+						<img src="./picture/a93351efc9fc1d11cb4c5b7e6a762700-newlogo.png" alt="">
+					</a>
+				</div>
+				<ul class="nav flex">
+					<li><a href="/">发现</a></li>
+					<li><a href="/login">播客入口</a></li>
+					<li><a href="#">下载客户端</a></li>
+				</ul>
+			</section>
+		</header>
+		
+		<!-- 主体 -->
+		<section id="main" class="flex">
+			<section class="content flex" >
+				<!-- 左部主体 -->
+				<section class="main-box flex">
+					<!-- 轮播图 -->
+					<section id="toplbt" class="toplbt">
+						
+						<div class="wrap">
+							<div id="total">
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+							</div>
+							<ul id="lbtimg" class="lbtlist flex">						
+								<li><a href="#"><img src="/picture/32135752493715725_660x252.jpg" alt="江山如梦，歌者不休——绝美古风音乐大赏vol.4"></a></li>
+								<li><a href="#"><img src="/picture/32132801851079053_660x252.jpg" alt="江山如梦，歌者不休——绝美古风音乐大赏vol.4"></a></li>
+								<li><a href="#"><img src="./picture/31468405038646029_660x252.jpg" alt="江山如梦，歌者不休——绝美古风音乐大赏vol.4"></a></li>
+								<li><a href="#"><img src="./picture/31348458144969101_660x252.jpg" alt="江山如梦，歌者不休——绝美古风音乐大赏vol.4"></a></li>
+								<li><a href="#"><img src="./picture/30442592096845709_660x252.jpg" alt="江山如梦，歌者不休——绝美古风音乐大赏vol.4"></a></li>
+							
+							</ul>
+							
+						</div>
+						<a href="" id="lbt-prev" class="prev fx"></a>
+						<a href="" id="lbt-next" class="next fx"></a>
+						<ul id="lbt-pager" class="lbtpager">
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</section>
+					
+					<!-- 左右轮图 -->
+					<section id="promoRadio" class="carousel">
+
+						<div class="carouseTitle flex">
+							<div class="cleft">
+								优选
+								<a href="#">查看全部</a>
+							</div>
+							<div class="cright">
+								<a href="#" class="crprev yan"></a>
+								<a href="#" class="crnext yan"></a>
+							</div>
+						</div>
+
+						<div class="carouselBox">
+							<ul class="flex">
+							<% youxuan.forEach(function(data){ %>
+								<li class="radio_list">
+									<a href="/content" class="radioCover">
+										<img src="<%= data.img %>" alt="">
+										<span class="radioBand">
+											FM
+											<i><%= data.radioBand %></i>
+										</span>
+										<span class="radioBandBg"></span>
+									</a>
+									<p class="radioName fontYaHei">
+										<a href="#"> <%= data.radioName %></a>
+									</p>
+									<p class="radioAuthor fontYaHei">
+										<a href="#"><%= data.radioAuthor %></a>
+									</p>
+									<p class="radio-last-audio fontYaHei">
+										<span></span>
+										<a href="#"><%= data.radio_last_audio %></a>
+									</p>
+								</li>
+								<%	}) %>
+							</ul>
+						</div>
+
+					</section>
+
+					<section id="hotRadio" class="carousel">
+
+						<div class="carouseTitle flex">
+							<div class="cleft">
+								热榜
+								<a href="#">查看全部</a>
+							</div>
+							<div class="cright">
+								<a href="#" class="crprev yan"></a>
+								<a href="#" class="crnext yan"></a>
+							</div>
+						</div>
+
+						<div class="carouselBox">
+							<ul class="flex">
+								<% rebang.forEach(function(data){ %>
+								<li class="radio_list">
+									<a href="/content" class="radioCover">
+										<img src="<%= data.img %>" alt="">
+										<span class="radioBand">
+											FM
+											<i><%= data.radioBand %></i>
+										</span>
+										<span class="radioBandBg"></span>
+									</a>
+									<p class="radioName fontYaHei">
+										<a href="#"> <%= data.radioName %></a>
+									</p>
+									<p class="radioAuthor fontYaHei">
+										<a href="#"><%= data.radioAuthor %></a>
+									</p>
+									<p class="radio-last-audio fontYaHei">
+										<span></span>
+										<a href="#"><%= data.radio_last_audio %></a>
+									</p>
+								</li>
+								<%	}) %>
+								
+							</ul>
+						</div>
+						
+					</section>
+
+					<section id="newHotRadio" class="carousel">
+
+						<div class="carouseTitle flex">
+							<div class="cleft">
+								新晋
+								<a href="#">查看全部</a>
+							</div>
+							<div class="cright">
+								<a href="#" class="crprev yan"></a>
+								<a href="#" class="crnext yan"></a>
+							</div>
+						</div>
+
+						<div class="carouselBox">
+							<ul class="flex">
+									
+								<% xinjin.forEach(function(data){ %>
+								<li class="radio_list">
+									<a href="/content" class="radioCover">
+										<img src="<%= data.img %>" alt="">
+										<span class="radioBand">
+											FM
+											<i><%= data.radioBand %></i>
+										</span>
+										<span class="radioBandBg"></span>
+									</a>
+									<p class="radioName fontYaHei">
+										<a href="#"> <%= data.radioName %></a>
+									</p>
+									<p class="radioAuthor fontYaHei">
+										<a href="#"><%= data.radioAuthor %></a>
+									</p>
+									<p class="radio-last-audio fontYaHei">
+										<span></span>
+										<a href="#"><%= data.radio_last_audio %></a>
+									</p>
+								</li>
+								<%	}) %>
+
+							</ul>
+						</div>
+						
+					</section>
+
+					<!-- 热门分类 -->
+					<section class="stay">
+						<div class="box-title fontYaHei flex">
+							<div class="left">热门分类-鬼故事</div>
+							<div class="right">
+								<a href="#">查看全部</a>
+							</div>
+						</div>
+
+						<ul class="hot-tags-list flex">
+							
+							<li class="hot-tags-list-item-first">
+								<div class="hot-tags-list-item-content">
+									<a href="/content">
+										<img src="<%= ggs_1.img %>">
+									</a>
+									<p class="hot-tags-list-item-title">
+										<a href="#"><%= ggs_1.radioBand %></a>
+										<a href="#"><%= ggs_1.radioName %></a>
+									</p>
+									<p class="hot-tags-list-item-subtitle">
+										<a href="#"><%= ggs_1.radioAuthor %></a>
+									</p>
+									<span class="hot-tags-list-item-content-bg"></span>
+								</div>
+							</li>
+							
+							<ul class="ulsecation flex">
+								<% ggs_2.forEach(function(data){ %>
+								<li class="hot-tags-list-item ">
+									<div class="hot-tags-list-item-content">
+										<a href="/content">
+											<img src="<%= data.img %>" alt="">
+										</a>
+										<p class="hot-tags-list-item-title">
+											<a href="#"><%= data.radioBand %></a>
+										</p>
+										<div class="hot-tags-list-item-subtitle">
+											<div><a href="#"><%= data.radioName %></a></div>
+											<div><a href="#"><%= data.radioAuthor %></a></div>
+										</div>
+										<p class="hot-tags-list-item-last-audio">
+											<span></span>
+											<a href="#"><%= data.radio_last_audio %></a>
+										</p>
+										<span class="hot-tags-list-item-content-bg"></span>
+									</div>
+								</li>
+								<%	}) %>
+							</ul>
+						</ul>
+					</section>
+
+					<section class="stay">
+						<div class="box-title fontYaHei flex">
+							<div class="left">热门分类-广播剧</div>
+							<div class="right">
+								<a href="#">查看全部</a>
+							</div>
+						</div>
+
+						<ul class="hot-tags-list flex">
+							
+							<li class="hot-tags-list-item-first">
+								<div class="hot-tags-list-item-content">
+									<a href="/content">
+										<img src="<%= gbj_1.img %>">
+									</a>
+									<p class="hot-tags-list-item-title">
+										<a href="#"><%= gbj_1.radioBand %></a>
+										<a href="#"><%= gbj_1.radioName %></a>
+									</p>
+									<p class="hot-tags-list-item-subtitle">
+										<a href="#"><%= gbj_1.radioAuthor %></a>
+									</p>
+									<span class="hot-tags-list-item-content-bg"></span>
+								</div>
+							</li>
+							
+							<ul class="ulsecation flex">
+								<% gbj_2.forEach(function(data){ %>
+								<li class="hot-tags-list-item ">
+									<div class="hot-tags-list-item-content">
+										<a href="/content">
+											<img src="<%= data.img %>" alt="">
+										</a>
+										<p class="hot-tags-list-item-title">
+											<a href="#"><%= data.radioBand %></a>
+										</p>
+										<div class="hot-tags-list-item-subtitle">
+											<div><a href="#"><%= data.radioName %></a></div>
+											<div><a href="#"><%= data.radioAuthor %></a></div>
+										</div>
+										<p class="hot-tags-list-item-last-audio">
+											<span></span>
+											<a href="#"><%= data.radio_last_audio %></a>
+										</p>
+										<span class="hot-tags-list-item-content-bg"></span>
+									</div>
+								</li>
+								<%	}) %>
+							</ul>
+						</ul>
+					</section>
+
+					<section class="stay">
+						<div class="box-title fontYaHei flex">
+							<div class="left">热门分类-脱口秀</div>
+							<div class="right">
+								<a href="#">查看全部</a>
+							</div>
+						</div>
+
+						<ul class="hot-tags-list flex">
+							
+							<li class="hot-tags-list-item-first">
+								<div class="hot-tags-list-item-content">
+									<a href="/content">
+										<img src="<%= tkx_1.img %>">
+									</a>
+									<p class="hot-tags-list-item-title">
+										<a href="#"><%= tkx_1.radioBand %></a>
+										<a href="#"><%= tkx_1.radioName %></a>
+									</p>
+									<p class="hot-tags-list-item-subtitle">
+										<a href="#"><%= tkx_1.radioAuthor %></a>
+									</p>
+									<span class="hot-tags-list-item-content-bg"></span>
+								</div>
+							</li>
+							
+							<ul class="ulsecation flex">
+								<% tkx_2.forEach(function(data){ %>
+								<li class="hot-tags-list-item ">
+									<div class="hot-tags-list-item-content">
+										<a href="/content">
+											<img src="<%= data.img %>" alt="">
+										</a>
+										<p class="hot-tags-list-item-title">
+											<a href="#"><%= data.radioBand %></a>
+										</p>
+										<div class="hot-tags-list-item-subtitle">
+											<div><a href="#"><%= data.radioName %></a></div>
+											<div><a href="#"><%= data.radioAuthor %></a></div>
+										</div>
+										<p class="hot-tags-list-item-last-audio">
+											<span></span>
+											<a href="#"><%= data.radio_last_audio %></a>
+										</p>
+										<span class="hot-tags-list-item-content-bg"></span>
+									</div>
+								</li>
+								<%	}) %>
+							</ul>
+						</ul>
+					</section>
+
+					<section class="stay">
+						<div class="box-title fontYaHei flex">
+							<div class="left">热门分类-偶像</div>
+							<div class="right">
+								<a href="#">查看全部</a>
+							</div>
+						</div>
+
+						<ul class="hot-tags-list flex">
+							
+							<li class="hot-tags-list-item-first">
+								<div class="hot-tags-list-item-content">
+									<a href="/content">
+										<img src="<%= ox_1.img %>">
+									</a>
+									<p class="hot-tags-list-item-title">
+										<a href="#"><%= ox_1.radioBand %></a>
+										<a href="#"><%= ox_1.radioName %></a>
+									</p>
+									<p class="hot-tags-list-item-subtitle">
+										<a href="#"><%= ox_1.radioAuthor %></a>
+									</p>
+									<span class="hot-tags-list-item-content-bg"></span>
+								</div>
+							</li>
+							
+							<ul class="ulsecation flex">
+								<% ox_2.forEach(function(data){ %>
+								<li class="hot-tags-list-item ">
+									<div class="hot-tags-list-item-content">
+										<a href="/content">
+											<img src="<%= data.img %>" alt="">
+										</a>
+										<p class="hot-tags-list-item-title">
+											<a href="#"><%= data.radioBand %></a>
+										</p>
+										<div class="hot-tags-list-item-subtitle">
+											<div><a href="#"><%= data.radioName %></a></div>
+											<div><a href="#"><%= data.radioAuthor %></a></div>
+										</div>
+										<p class="hot-tags-list-item-last-audio">
+											<span></span>
+											<a href="#"><%= data.radio_last_audio %></a>
+										</p>
+										<span class="hot-tags-list-item-content-bg"></span>
+									</div>
+								</li>
+								<%	}) %>
+							</ul>
+						</ul>
+					</section>
+
+					<section class="stay">
+						<div class="box-title fontYaHei flex">
+							<div class="left">热门分类-综艺</div>
+							<div class="right">
+								<a href="#">查看全部</a>
+							</div>
+						</div>
+
+						<ul class="hot-tags-list flex">
+							
+							<li class="hot-tags-list-item-first">
+								<div class="hot-tags-list-item-content">
+									<a href="/content">
+										<img src="<%= zy_1.img %>">
+									</a>
+									<p class="hot-tags-list-item-title">
+										<a href="#"><%= zy_1.radioBand %></a>
+										<a href="#"><%= zy_1.radioName %></a>
+									</p>
+									<p class="hot-tags-list-item-subtitle">
+										<a href="#"><%= zy_1.radioAuthor %></a>
+									</p>
+									<span class="hot-tags-list-item-content-bg"></span>
+								</div>
+							</li>
+							
+							<ul class="ulsecation flex">
+								<% zy_2.forEach(function(data){ %>
+								<li class="hot-tags-list-item ">
+									<div class="hot-tags-list-item-content">
+										<a href="/content">
+											<img src="<%= data.img %>" alt="">
+										</a>
+										<p class="hot-tags-list-item-title">
+											<a href="#"><%= data.radioBand %></a>
+										</p>
+										<div class="hot-tags-list-item-subtitle">
+											<div><a href="#"><%= data.radioName %></a></div>
+											<div><a href="#"><%= data.radioAuthor %></a></div>
+										</div>
+										<p class="hot-tags-list-item-last-audio">
+											<span></span>
+											<a href="#"><%= data.radio_last_audio %></a>
+										</p>
+										<span class="hot-tags-list-item-content-bg"></span>
+									</div>
+								</li>
+								<%	}) %>
+							</ul>
+						</ul>
+					</section>
+
+					<!-- 更多播客 -->
+					<section id="allRadioTag">
+						<section class="carouseTitle fontYaHei">
+							<div class="left">
+								更多播客
+							</div>
+						</section>
+						
+						<section class="tage flex">
+							<div class="tagName fontYaHei">情感</div>
+							<ul class="flex">
+								<li><a href="#">恋爱</a></li>
+								<li><a href="#">两性</a></li>
+								<li><a href="#">心理</a></li>
+								<li><a href="#">治愈</a></li>
+								<li><a href="#">美文</a></li>
+							</ul>
+						</section>
+
+						<section class="tage flex">
+							<div class="tagName fontYaHei">音乐</div>
+							<ul class="flex">
+								<li><a href="#">摇滚</a></li>
+								<li><a href="#">民谣</a></li>
+								<li><a href="#">电音</a></li>
+								<li><a href="#">纯音乐</a></li>
+								<li><a href="#">翻唱</a></li>
+								<li><a href="#">流行</a></li>
+							</ul>
+						</section>
+
+						<section class="tage flex">
+							<div class="tagName fontYaHei">生活</div>
+							<ul class="flex">
+								<li><a href="#">美食</a></li>
+								<li><a href="#">旅行</a></li>
+								<li><a href="#">女性</a></li>
+								<li><a href="#">健康</a></li>
+								<li><a href="#">电台</a></li>
+								<li><a href="#">校园</a></li>
+								<li><a href="#">公益</a></li>
+							</ul>
+						</section>
+
+						<section class="tage flex">
+							<div class="tagName fontYaHei">资讯</div>
+							<ul class="flex">
+								<li><a href="#">新闻</a></li>
+								<li><a href="#">财经</a></li>
+								<li><a href="#">教育</a></li>
+								<li><a href="#">科技</a></li>
+								<li><a href="#">体育</a></li>
+								<li><a href="#">汽车</a></li>
+							</ul>
+						</section>
+
+						<section class="tage flex">
+							<div class="tagName fontYaHei">娱乐</div>
+							<ul class="flex">
+								<li><a href="#">综艺</a></li>
+								<li><a href="#">影视</a></li>
+								<li><a href="#">偶像</a></li>
+								<li><a href="#">星座</a></li>
+								<li><a href="#">访谈</a></li>
+								<li><a href="#">八卦</a></li>
+							</ul>
+						</section>
+
+						<section class="tage flex">
+							<div class="tagName fontYaHei">二次元</div>
+							<ul class="flex">
+								<li><a href="#">ACG音乐</a></li>
+								<li><a href="#">动漫</a></li>
+								<li><a href="#">游戏</a></li>
+								<li><a href="#">宅腐基</a></li>
+								<li><a href="#">古风</a></li>
+								<li><a href="#">同人</a></li>
+							</ul>
+						</section>
+
+						<section class="tage flex">
+							<div class="tagName fontYaHei">广播剧</div>
+							<ul class="flex">
+								<li><a href="#">耽美</a></li>
+								<li><a href="#">古风剧</a></li>
+								<li><a href="#">现代剧</a></li>
+								<li><a href="#">CV</a></li>
+							</ul>
+						</section>
+
+						<section class="tage flex">
+							<div class="tagName fontYaHei">文化</div>
+							<ul class="flex">
+								<li><a href="#">历史</a></li>
+								<li><a href="#">人文</a></li>
+								<li><a href="#">诗歌</a></li>
+								<li><a href="#">鬼故事</a></li>
+								<li><a href="#">有声书</a></li>
+								<li><a href="#">讲座</a></li>
+							</ul>
+						</section>
+
+						<section class="tage flex">
+							<div class="tagName fontYaHei">脱口秀</div>
+							<ul class="flex">
+								<li><a href="#">名嘴秀</a></li>
+								<li><a href="#">达人秀</a></li>
+								<li><a href="#">神吐槽</a></li>
+								<li><a href="#">段子手</a></li>
+							</ul>
+						</section>
+
+						<section class="tage flex">
+							<div class="tagName fontYaHei">语言</div>
+							<ul class="flex">
+								<li><a href="#">英语交流</a></li>
+								<li><a href="#">影视英语</a></li>
+								<li><a href="#">考试英语</a></li>
+								<li><a href="#">日语</a></li>
+								<li><a href="#">韩语</a></li>
+								<li><a href="#">小语种</a></li>
+								<li><a href="#">粤语</a></li>
+								<li><a href="#">方言</a></li>
+							</ul>
+						</section>
+
+						<section class="tage flex">
+							<div class="tagName fontYaHei">亲子</div>
+							<ul class="flex">
+								<li><a href="#">育儿</a></li>
+								<li><a href="#">胎教</a></li>
+								<li><a href="#">儿歌</a></li>
+								<li><a href="#">童话</a></li>
+								<li><a href="#">伴读</a></li>
+							</ul>
+						</section>
+					</section>				
+				</section>
+
+				<!-- 右部侧边栏 -->
+				<aside id="side-box">
+					<a href="#" class="downApp">
+						<img src="/images/downloadapp-banner.png" alt="下载荔枝FM客户端">
+					</a>
+					<div class="downloadLink flex">
+						<a href="#" class="ios"></a>
+						<a href="#" class="android"></a>
+						<a href="#" class="ipad"></a>
+						<a href="#" class="winPhone"></a>
+					</div>
+
+					<!-- 榜 -->
+					<section class="billboard">
+						<div class="box-title flex">
+							<div class="left">
+								<a href="#">订阅TOP榜</a>
+							</div>
+							<div class="right">
+								<a href="#">查看全部</a>
+							</div>
+						</div>
+						<ul class="contentList">
+							<li class="item">
+								<div class="item-cont flex">
+									<a href="#" class="item-cont-img">
+										<img src="/picture/2560159292897161732_80x80.jpg" alt="">
+									</a>
+									<div class="item-main">
+										<p class="audioName">
+											<a href="#">昨天的你的现在的未来</a>
+										</p>
+										<p class="authorName">
+											<a href="#">背着吉他的蝙蝠女侠</a>
+										</p>
+										<p class="fanCount">粉丝 180.3万</p>
+										<p class="radio-last-audio fontYaHei">
+											<span></span>
+											<a href="#">263 那些超有强调，甩“我爱你”十条街是调节的情话（文/抹茶与十</a>
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="item-cont flex">
+									<a href="#" class="item-cont-img">
+										<img src="/picture/2560159292897161732_80x80.jpg" alt="">
+									</a>
+									<div class="item-main">
+										<p class="audioName">
+											<a href="#">昨天的你的现在的未来</a>
+										</p>
+										<p class="authorName">
+											<a href="#">背着吉他的蝙蝠女侠</a>
+										</p>
+										<p class="fanCount">粉丝 180.3万</p>
+										<p class="radio-last-audio fontYaHei">
+											<span></span>
+											<a href="#">263 那些超有强调，甩“我爱你”十条街是调节的情话（文/抹茶与十</a>
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="item-cont flex">
+									<a href="#" class="item-cont-img">
+										<img src="/picture/2560159292897161732_80x80.jpg" alt="">
+									</a>
+									<div class="item-main">
+										<p class="audioName">
+											<a href="#">昨天的你的现在的未来</a>
+										</p>
+										<p class="authorName">
+											<a href="#">背着吉他的蝙蝠女侠</a>
+										</p>
+										<p class="fanCount">粉丝 180.3万</p>
+										<p class="radio-last-audio fontYaHei">
+											<span></span>
+											<a href="#">263 那些超有强调，甩“我爱你”十条街是调节的情话（文/抹茶与十</a>
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="item-cont flex">
+									<a href="#" class="item-cont-img">
+										<img src="/picture/2560159292897161732_80x80.jpg" alt="">
+									</a>
+									<div class="item-main">
+										<p class="audioName">
+											<a href="#">昨天的你的现在的未来</a>
+										</p>
+										<p class="authorName">
+											<a href="#">背着吉他的蝙蝠女侠</a>
+										</p>
+										<p class="fanCount">粉丝 180.3万</p>
+										<p class="radio-last-audio fontYaHei">
+											<span></span>
+											<a href="#">263 那些超有强调，甩“我爱你”十条街是调节的情话（文/抹茶与十</a>
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="item-cont flex">
+									<a href="#" class="item-cont-img">
+										<img src="/picture/2560159292897161732_80x80.jpg" alt="">
+									</a>
+									<div class="item-main">
+										<p class="audioName">
+											<a href="#">昨天的你的现在的未来</a>
+										</p>
+										<p class="authorName">
+											<a href="#">背着吉他的蝙蝠女侠</a>
+										</p>
+										<p class="fanCount">粉丝 180.3万</p>
+										<p class="radio-last-audio fontYaHei">
+											<span></span>
+											<a href="#">263 那些超有强调，甩“我爱你”十条街是调节的情话（文/抹茶与十</a>
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="item-cont flex">
+									<a href="#" class="item-cont-img">
+										<img src="/picture/2560159292897161732_80x80.jpg" alt="">
+									</a>
+									<div class="item-main">
+										<p class="audioName">
+											<a href="#">昨天的你的现在的未来</a>
+										</p>
+										<p class="authorName">
+											<a href="#">背着吉他的蝙蝠女侠</a>
+										</p>
+										<p class="fanCount">粉丝 180.3万</p>
+										<p class="radio-last-audio fontYaHei">
+											<span></span>
+											<a href="#">263 那些超有强调，甩“我爱你”十条街是调节的情话（文/抹茶与十</a>
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="item-cont flex">
+									<a href="#" class="item-cont-img">
+										<img src="/picture/2560159292897161732_80x80.jpg" alt="">
+									</a>
+									<div class="item-main">
+										<p class="audioName">
+											<a href="#">昨天的你的现在的未来</a>
+										</p>
+										<p class="authorName">
+											<a href="#">背着吉他的蝙蝠女侠</a>
+										</p>
+										<p class="fanCount">粉丝 180.3万</p>
+										<p class="radio-last-audio fontYaHei">
+											<span></span>
+											<a href="#">263 那些超有强调，甩“我爱你”十条街是调节的情话（文/抹茶与十</a>
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="item-cont flex">
+									<a href="#" class="item-cont-img">
+										<img src="/picture/2560159292897161732_80x80.jpg" alt="">
+									</a>
+									<div class="item-main">
+										<p class="audioName">
+											<a href="#">昨天的你的现在的未来</a>
+										</p>
+										<p class="authorName">
+											<a href="#">背着吉他的蝙蝠女侠</a>
+										</p>
+										<p class="fanCount">粉丝 180.3万</p>
+										<p class="radio-last-audio fontYaHei">
+											<span></span>
+											<a href="#">263 那些超有强调，甩“我爱你”十条街是调节的情话（文/抹茶与十</a>
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="item-cont flex">
+									<a href="#" class="item-cont-img">
+										<img src="/picture/2560159292897161732_80x80.jpg" alt="">
+									</a>
+									<div class="item-main">
+										<p class="audioName">
+											<a href="#">昨天的你的现在的未来</a>
+										</p>
+										<p class="authorName">
+											<a href="#">背着吉他的蝙蝠女侠</a>
+										</p>
+										<p class="fanCount">粉丝 180.3万</p>
+										<p class="radio-last-audio fontYaHei">
+											<span></span>
+											<a href="#">263 那些超有强调，甩“我爱你”十条街是调节的情话（文/抹茶与十</a>
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="item-cont flex">
+									<a href="#" class="item-cont-img">
+										<img src="/picture/2560159292897161732_80x80.jpg" alt="">
+									</a>
+									<div class="item-main">
+										<p class="audioName">
+											<a href="#">昨天的你的现在的未来</a>
+										</p>
+										<p class="authorName">
+											<a href="#">背着吉他的蝙蝠女侠</a>
+										</p>
+										<p class="fanCount">粉丝 180.3万</p>
+										<p class="radio-last-audio fontYaHei">
+											<span></span>
+											<a href="#">263 那些超有强调，甩“我爱你”十条街是调节的情话（文/抹茶与十</a>
+										</p>
+									</div>
+								</div>
+							</li>
+
+						</ul>
+					</section>
+					
+					<!-- 热播节目 -->
+					<section class="billboard">
+						<div class="box-title fontYahei flex">
+							<div class="left">
+								<a href="#">热播节目</a>
+							</div>
+							<div class="right">
+								<a href="#">查看全部</a>
+							</div>
+						</div>
+
+						<ul class="contentList">
+							<li class="item">
+								<div class="item-cont flex">
+									<a href="#" class="item-cont-img">
+										<img src="/picture/11469039619322114_80x80.jpg" alt="">
+									</a>
+									<div class="item-main">
+										<p class="audioName">
+											<a href="#">如果可以，我不会喜欢你。</a>
+										</p>
+										<p class="authorName">
+											<a href="#">程一电台</a>
+										</p>
+										<p class="fanCount">
+											<i class="stat-play-icon"></i>
+											64694
+										</p>
+										
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="item-cont flex">
+									<a href="#" class="item-cont-img">
+										<img src="/picture/11469039619322114_80x80.jpg" alt="">
+									</a>
+									<div class="item-main">
+										<p class="audioName">
+											<a href="#">如果可以，我不会喜欢你。</a>
+										</p>
+										<p class="authorName">
+											<a href="#">程一电台</a>
+										</p>
+										<p class="fanCount">
+											<i class="stat-play-icon"></i>
+											64694
+										</p>
+										
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="item-cont flex">
+									<a href="#" class="item-cont-img">
+										<img src="/picture/11469039619322114_80x80.jpg" alt="">
+									</a>
+									<div class="item-main">
+										<p class="audioName">
+											<a href="#">如果可以，我不会喜欢你。</a>
+										</p>
+										<p class="authorName">
+											<a href="#">程一电台</a>
+										</p>
+										<p class="fanCount">
+											<i class="stat-play-icon"></i>
+											64694
+										</p>
+										
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="item-cont flex">
+									<a href="#" class="item-cont-img">
+										<img src="/picture/11469039619322114_80x80.jpg" alt="">
+									</a>
+									<div class="item-main">
+										<p class="audioName">
+											<a href="#">如果可以，我不会喜欢你。</a>
+										</p>
+										<p class="authorName">
+											<a href="#">程一电台</a>
+										</p>
+										<p class="fanCount">
+											<i class="stat-play-icon"></i>
+											64694
+										</p>
+										
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="item-cont flex">
+									<a href="#" class="item-cont-img">
+										<img src="/picture/11469039619322114_80x80.jpg" alt="">
+									</a>
+									<div class="item-main">
+										<p class="audioName">
+											<a href="#">如果可以，我不会喜欢你。</a>
+										</p>
+										<p class="authorName">
+											<a href="#">程一电台</a>
+										</p>
+										<p class="fanCount">
+											<i class="stat-play-icon"></i>
+											64694
+										</p>
+										
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="item-cont flex">
+									<a href="#" class="item-cont-img">
+										<img src="/picture/11469039619322114_80x80.jpg" alt="">
+									</a>
+									<div class="item-main">
+										<p class="audioName">
+											<a href="#">如果可以，我不会喜欢你。</a>
+										</p>
+										<p class="authorName">
+											<a href="#">程一电台</a>
+										</p>
+										<p class="fanCount">
+											<i class="stat-play-icon"></i>
+											64694
+										</p>
+										
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="item-cont flex">
+									<a href="#" class="item-cont-img">
+										<img src="/picture/11469039619322114_80x80.jpg" alt="">
+									</a>
+									<div class="item-main">
+										<p class="audioName">
+											<a href="#">如果可以，我不会喜欢你。</a>
+										</p>
+										<p class="authorName">
+											<a href="#">程一电台</a>
+										</p>
+										<p class="fanCount">
+											<i class="stat-play-icon"></i>
+											64694
+										</p>
+										
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="item-cont flex">
+									<a href="#" class="item-cont-img">
+										<img src="/picture/11469039619322114_80x80.jpg" alt="">
+									</a>
+									<div class="item-main">
+										<p class="audioName">
+											<a href="#">如果可以，我不会喜欢你。</a>
+										</p>
+										<p class="authorName">
+											<a href="#">程一电台</a>
+										</p>
+										<p class="fanCount">
+											<i class="stat-play-icon"></i>
+											64694
+										</p>
+										
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="item-cont flex">
+									<a href="#" class="item-cont-img">
+										<img src="/picture/11469039619322114_80x80.jpg" alt="">
+									</a>
+									<div class="item-main">
+										<p class="audioName">
+											<a href="#">如果可以，我不会喜欢你。</a>
+										</p>
+										<p class="authorName">
+											<a href="#">程一电台</a>
+										</p>
+										<p class="fanCount">
+											<i class="stat-play-icon"></i>
+											64694
+										</p>
+										
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="item-cont flex">
+									<a href="#" class="item-cont-img">
+										<img src="/picture/11469039619322114_80x80.jpg" alt="">
+									</a>
+									<div class="item-main">
+										<p class="audioName">
+											<a href="#">如果可以，我不会喜欢你。</a>
+										</p>
+										<p class="authorName">
+											<a href="#">程一电台</a>
+										</p>
+										<p class="fanCount">
+											<i class="stat-play-icon"></i>
+											64694
+										</p>
+										
+									</div>
+								</div>
+							</li>
+						</ul>
+					</section>
+
+					<!-- 热门主播 -->
+					<section class="billboard" id="hotAuthor">
+						<div class="box-title fontYahei flex">
+							<div class="left">
+								<a href="#">热播节目</a>
+							</div>
+							<div class="right">
+								<a href="#">查看全部</a>
+							</div>
+						</div>
+						<ul class="author-list">
+							<li class="author-list-item">
+								<a href="#" class="flex">
+									<div class="img">
+										<img src="/picture/29422858705767298_80x80.jpg" alt="背着吉他的蝙蝠女侠">
+										<span></span>
+									</div>
+									<div class="author-content">
+										<p class="name">背着吉他的蝙蝠女侠</p>
+									</div>
+								</a>
+							</li>
+							<li class="author-list-item">
+								<a href="#" class="flex">
+									<div class="img">
+										<img src="/picture/29422858705767298_80x80.jpg" alt="背着吉他的蝙蝠女侠">
+										<span></span>
+									</div>
+									<div class="author-content">
+										<p class="name">背着吉他的蝙蝠女侠</p>
+									</div>
+								</a>
+							</li>
+							<li class="author-list-item">
+								<a href="#" class="flex">
+									<div class="img">
+										<img src="/picture/29422858705767298_80x80.jpg" alt="背着吉他的蝙蝠女侠">
+										<span></span>
+									</div>
+									<div class="author-content">
+										<p class="name">背着吉他的蝙蝠女侠</p>
+									</div>
+								</a>
+							</li>
+							<li class="author-list-item">
+								<a href="#" class="flex">
+									<div class="img">
+										<img src="/picture/29422858705767298_80x80.jpg" alt="背着吉他的蝙蝠女侠">
+										<span></span>
+									</div>
+									<div class="author-content">
+										<p class="name">背着吉他的蝙蝠女侠</p>
+									</div>
+								</a>
+							</li>
+							<li class="author-list-item">
+								<a href="#" class="flex">
+									<div class="img">
+										<img src="/picture/29422858705767298_80x80.jpg" alt="背着吉他的蝙蝠女侠">
+										<span></span>
+									</div>
+									<div class="author-content">
+										<p class="name">背着吉他的蝙蝠女侠</p>
+									</div>
+								</a>
+							</li>
+							<li class="author-list-item">
+								<a href="#" class="flex">
+									<div class="img">
+										<img src="/picture/29422858705767298_80x80.jpg" alt="背着吉他的蝙蝠女侠">
+										<span></span>
+									</div>
+									<div class="author-content">
+										<p class="name">背着吉他的蝙蝠女侠</p>
+									</div>
+								</a>
+							</li>
+							<li class="author-list-item">
+								<a href="#" class="flex">
+									<div class="img">
+										<img src="/picture/29422858705767298_80x80.jpg" alt="背着吉他的蝙蝠女侠">
+										<span></span>
+									</div>
+									<div class="author-content">
+										<p class="name">背着吉他的蝙蝠女侠</p>
+									</div>
+								</a>
+							</li>
+							<li class="author-list-item">
+								<a href="#" class="flex">
+									<div class="img">
+										<img src="/picture/29422858705767298_80x80.jpg" alt="背着吉他的蝙蝠女侠">
+										<span></span>
+									</div>
+									<div class="author-content">
+										<p class="name">背着吉他的蝙蝠女侠</p>
+									</div>
+								</a>
+							</li>
+							<li class="author-list-item">
+								<a href="#" class="flex">
+									<div class="img">
+										<img src="/picture/29422858705767298_80x80.jpg" alt="背着吉他的蝙蝠女侠">
+										<span></span>
+									</div>
+									<div class="author-content">
+										<p class="name">背着吉他的蝙蝠女侠</p>
+									</div>
+								</a>
+							</li>		
+						</ul>
+					</section>
+
+				</aside>
+			</section>
+		</section>
+
+		<!-- 页脚 -->
+		<footer class="flex fontYaHei">
+			<section class="contents">
+				<div class="first flex">
+					<div class="attentionUs flex">
+						<span>关注我们</span>
+						<a href="#" class="weixin"></a>
+						<a href="#" class="sina"></a>
+						<a href="#" class="douban"></a>
+						<a href="#" class="baidu"></a>
+					</div>
+					<div class="qqserver">
+						<span>客服QQ</span>
+						<a href="#">荔小棠</a>
+					</div>
+				</div>
+	
+				<div class="hot-promo">
+					<a href="#">世界是一封情书</a>
+					<a href="#">张佳玮说</a>
+					<a href="#">沈氏夫夫</a>
+					<a href="#">小P老师</a>
+					<a href="#">耽美广播剧</a>
+					<a href="#">卢思浩</a>
+					<a href="#">安安老师</a>
+					<a href="#">搞基实验室</a>
+					<a href="#">昨天的你现在的未来</a>
+					<a href="#">一些事一些情</a>
+					<a href="#">伊丽莎白鼠</a>
+				</div>
+
+				<div class="findely-link flex">
+					<span>友情链接</span>
+					<div class="findely-link-inner">						
+						<a href="#">邻居的耳朵</a>
+						<a href="#">佳人</a>
+						<a href="#">拍客网</a>
+						<a href="#">一加手机</a>
+						<a href="#">美拍</a>
+						<a href="#">聚焦摄影</a>
+						<a href="#">5253手游网</a>
+						<a href="#">手机浏览器</a>
+						<a href="#">第九软件网</a>
+						<a href="#">智能电视应用</a>
+						<a href="#">网页设计</a>
+						<a href="#">科技新闻</a>
+						<a href="#">网游加速器</a>
+					</div>
+					<a href="#" class="more">更多</a>
+				</div>
+				
+				<div class="save">
+					<div class="left">
+						 粤网文[2016]2975-618号 粤ICP备12026999号-5
+						 <br>
+						 <a href="#">
+						 	<img src="/picture/ghs.png">粤公网安备 44010602001357号
+						 </a>
+						  穗公网安备44010650010105号
+						  <br>
+						   广州荔支网络技术有限公司 2010-2016© All Rights Reserved. 本平台为信息网络存储空间网络服务平台 
+					</div>
+					<div class="right flex">
+						<a href="#">精选</a>
+						<a href="#">专题</a>
+						<a href="#">网站地图</a>
+						<a href="#">博客</a>
+						<a href="#">动态</a>
+						<a href="#">关于我们</a>
+						<a href="#">加入我们</a>
+						<a href="#">联系我们</a>
+						<a href="#">服务协议</a>
+						<a href="#">隐私政策</a>
+					</div>
+				</div>
+				
+				<div class="last">
+					<a href="#">
+						<img src="/images/hy_83x30.png" >
+					</a>
+				</div>
+			</section>
+		</footer>
+</body>
+</html>

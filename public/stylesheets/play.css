@@ -1,0 +1,100 @@
+/* 公共样式 */
+*{ margin:0;padding:0; }
+li{ list-style:none; }
+a{ text-decoration:none; }
+body{ font: 12px/18px Arial, Helvetica, sans-serif;margin: 0;padding: 0;background-color: #efeeeb;color: #867f6f;height:100%; }
+#container{ background:#EFEEEB;width:100%;height:100; }
+.clearfix::after{ clear:both;content:'.';display:block;width: 0;height: 0;visibility:hidden;}
+.fontYaHei {font-family: "Microsoft YaHei", "微软雅黑"; }
+.left{ float: left; }
+a{ color: #474747; }
+.divider{ border-top: 1px solid #e8e3d3; }
+
+.wrap{ height: 100%;overflow: hidden;position: relative;background-color: #f9f8f2;min-width: 960px;min-height: 100%; }
+
+/* 头部 */
+header{ background: url(/images/newheaderBG.png) repeat-x;height: 80px;padding-bottom: 9px;margin-bottom: -4px; }
+header .content{ margin: 0 auto;padding: 15px 0;position: relative;width: auto; }
+header .content .logo{ margin-right: 130px;margin-left: 70px; }
+
+/* 主体 */
+.box{ height: 100%; }
+.box .content{ position: relative;height: 100%;margin: 0 auto;justify-content:space-between;min-width:960px; }
+
+/* 主体右部 */
+.jspContainer{ overflow: hidden;position: relative; }
+.jspPane{  position: absolute; }
+
+.box .content .box-audio-detail-wrap{ overflow: hidden;padding: 0px;width: 248px;position: absolute;bottom: 205px;top: 20px;right: 0;height:100%; }
+.box-audio-detail-wrap .jspContainer{  width: 248px;height: 303px; }
+.box-audio-detail-wrap .jspContainer .jspPane{ padding: 0px;
+    top: 0px;width: 235px; }
+.box-audio-detail-wrap .jspContainer .jspPane .box-audio-detail{ width: 228px; }
+.box-audio-detail-wrap .jspContainer .jspPane .box-audio-detail .box-audio-detail-img{ width: 228px;height: 228px;margin-bottom: 30px; }
+.box-audio-detail-wrap .jspContainer .jspPane .box-audio-detail .box-audio-detail-title{ line-height: 26px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;font-size: 24px;margin-bottom: 5px; }
+.box-audio-detail-wrap .jspContainer .jspPane .box-audio-detail a{ color: #867f6f; }
+.box-audio-detail-wrap .jspContainer .jspPane .box-audio-detail .box-audio-detail-subtitle{ font-size: 18px;margin-bottom: 20px; }
+.box-audio-detail-wrap .jspContainer .jspPane .box-audio-detail .box-audio-detail-stats{ font-size: 14px;color: #a49d8c;margin-top: 20px;margin-bottom: 30px; }
+
+/* 左部 */
+.playlist-btn,.history-list-btn{ color: #efb313;margin-bottom: 5px;line-height: 28px;font-size: 16px;cursor: pointer; }
+.playlist-icon,history-list-icon{ margin-right: 10px;margin-bottom: -3px;display: inline-block;background: url(/images/box.png?v=0.10) no-repeat;width: 24px;height: 24px; }
+
+.box .content .box-side-box-wrap { text-align: center;position: absolute;bottom: 205px;top: 20px;left: 0;height:100%; }
+.box-side-box-wrap .jspContainer{ width: 291px;overflow: hidden;position: relative; }
+.box-side-box-wrap .jspContainer .jspPane{ padding: 0px;top: 0px;width: 278px;     position: absolute;top: 0px;}
+.box-side-box-wrap .box-side-box{ padding-left: 20px;width: 251px; }
+
+.box-side-box-wrap .box-side-box .playlist-btn .playlist-icon{ background-position: -53px -50px; }
+.box-side-box-wrap .box-side-box .history-list-btn .history-list-icon{ background-position: -229px -110px; }
+.box-side-box-wrap .box-side-box .divider{ margin: 20px 0; }
+.box-side-box-wrap .box-side-box .downloadLink{ width: 250px;padding-top: 15px;padding-bottom: 10px; }
+.box-side-box-wrap .box-side-box .downloadLink a{ background: url(/images/download-app-btn.png) no-repeat 0 0px;margin: 10px 0px;width: 114px;height: 42px;cursor: pointer; }
+.box-side-box-wrap .box-side-box .downloadLink .iosDownBtn{ float: left;background-position: -20px -18px; }
+.box-side-box-wrap .box-side-box .downloadLink .androidDownBtn{ float: right;background-position: -156px -18px; }
+.box-side-box-wrap .box-side-box .downloadLink .ipadDownBtn{ float: left;background-position: -20px -79px; }
+.box-side-box-wrap .box-side-box .downloadLink .winPhoneDownBtn{ float: right;background-position: -156px -79px; }
+
+/* 中部 */
+.box .content .box-main{ padding: 0 20px;position: absolute;bottom: 185px;top: 0px;right: 268px;left: 291px;border-left: 1px solid #dbd6c8;border-right: 1px solid #dbd6c8;overflow: auto;height:100%;}
+.box .content .box-main .playlist .playlist-item{ height: 60px;line-height: 60px;padding: 0 15px;display: block;position: relative;border-bottom: 1px solid #e7e2d4; }
+.box .content .box-main .playlist .playlist-item .playlist-item-header-btn{  position: absolute;top: 15px;right: 0;height: 30px;width: 7em;border: 1px solid #d7d4c5;border-radius: 4px;color: inherit;background-color: transparent;cursor: pointer; }
+.box .content .box-main .playlist .playlist-item .playlist-item-header-btn:hover{ background:#d7d4c5; }
+.box .content .box-main .playlist .playlist-item .playlist-item-content{ margin-left: 40px;margin-right: 120px; }
+.box .content .box-main .playlist .playlist-item .playlist-item-content .playlist-item-name{ display: inline-block;width: 53%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis; }
+.playlist-item-content .playlist-item-user-name,.playlist-item-content .playlist-item-radio-name{ display: inline-block;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;width: 20%;margin-left: 1%; }
+.box-main .playlist-item{ height: 60px;line-height: 60px;padding: 0 15px;display: block;position: relative;border-bottom: 1px solid #e7e2d4; }
+.box-main .playlist-item .playlist-item-index{ display: inline-block;text-align: center;top: 0;left: 15px;position: absolute;width: 40px;height: 60px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;font-size: 16px;} 
+.box .content .box-main .playlist .ui-sortable li .playlist-item:hover{ cursor:pointer;background:#e9e6dc; }
+
+/* 控制台 */
+.controller-box{  position: fixed;bottom: 0;left: 0;width: 100%;height: 100px;background: url(/images/box-footer.png) repeat-x;min-width:960px; }
+.controller-box .content{ width: auto;margin: 0 auto;position: relative;height: 102px; }
+.controller-box .current-audio-title{ font-size: 12px;color: #867f6f;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;margin-top: -28px;margin-bottom: 10px;margin-left: -51px;margin-right: -51px; }
+/* 控制按钮 */
+.controller-box .content .controller-box-ctrl{ float: left;width: 310px;padding-left: 40px;margin-top: 20px; }
+.controller-box i{ display: inline-block;cursor: pointer;background: url(/images/box.png) no-repeat; }
+.controller-box .controller-prev{ width: 54px;height: 54px;background-position: -52px -226px;margin-bottom: 2px;margin-right: 15px; }
+.controller-box .controller-play{ width: 64px;height: 64px;background-position: -389px -306px; }
+.controller-box .controller-next{ width: 54px;height: 54px;background-position: -204px -226px;margin-bottom: 2px;margin-left: 16px; }
+.controller-box .controller-repeater{ background: url(/images/box.png) no-repeat -41px -501px;width: 29px;height: 47px;margin-left: 48px; }
+
+/* 控制音量 */
+.controller-box .controller-box-volume{ margin-top: 37px;float: right;width: 278px; }
+
+.controller-box .controller-box-volume .controller-volume-icon{ background: url(/images/box.png) no-repeat -675px -507px;width: 24px;height: 22px;margin-right: 10px;vertical-align: middle; }
+.controller-box .controller-box-volume .rangeslider-wrap{ display: inline-block;margin-top: 3px;vertical-align: middle;width: 180px;background-color: #e9e2c6;background-image: -webkit-linear-gradient(-90deg, #dbd4ba 0%, #f0ebd8 57%, #f1eddd 100%);box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.35);padding: 3px 4px; }
+.controller-box .rangeslider-wrap .rangeslider{ cursor: pointer;background: #979288;position: relative;height: 4px;box-shadow: inset 0px 2px 5px -2px rgba(0, 0, 0, 0.3); }
+.controller-box .rangeslider-wrap .rangeslider .rangeslider__fill{ background-image: none;background: #fbda7c;position: absolute;top: 0;display: block;height: 4px;box-shadow: inset 0px 2px 5px -2px rgba(0, 0, 0, 0.3); }
+
+/* 进度条 */
+.controller-box .controller-box-position{ margin-left: 375px;margin-right: 346px;position: relative;padding-left: 50px;padding-right: 50px;padding-top: 44px;min-width:140px; }
+.controller-box .controller-box-position .rangeslider-wrap{  background-color: #e9e2c6;background-image: -webkit-linear-gradient(-90deg, #dbd4ba 0%, #f0ebd8 57%, #f1eddd 100%);box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.35);padding: 3px 4px; }
+.controller-box .controller-box-position .rangeslider__handle{ cursor: pointer;display: inline-block;width: 28px;height: 28px;position: absolute;top: 0;margin-top: -11px;margin-left: -15px;background-position: center;background-image: url(/images/silder-btn.png); }
+.controller-box .controller-box-position .rangeslider__cache{ background: #fbda7c;display: block;height: 4px;box-shadow: inset 0px 2px 5px -2px rgba(0, 0, 0, 0.3); }
+.controller-box .controller-box-position .controller-position{ position: absolute;top: 41px;left: 0; }
+.controller-box .controller-box-position .controller-duration{ position: absolute;top: 41px;right: 0; }
+.controller-box-position .rangeslider-wrap .rangeslider .rangeslider__fill{ background:#fb9939; }
+
+/* 音频 */
+audio{ display:none; }

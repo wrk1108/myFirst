@@ -1,0 +1,12 @@
+$(function(){
+	$('#login_Btn').click(function(){
+		$.post('/login',{idNumber:$('#idNumber').attr('value'),passWord:$('#passWord').attr('value')},function(data){
+			if(data!=0){
+				alert('登录成功:'+data+'欢迎您！');				 
+					window.location.href='/';
+			}else{
+				$('.errorMessage').css('display','block');
+			};
+		});
+	});
+});
