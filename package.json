@@ -2,6 +2,10 @@
   "name": "lizhiFM",
   "version": "0.0.0",
   "private": true,
+  "author": {
+    "name": "wrknode",
+    "email": "453508011@qq.com"
+  },
   "scripts": {
     "start": "node ./bin/www"
   },
