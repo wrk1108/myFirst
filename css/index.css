@@ -61,7 +61,7 @@ li{ list-style:none;}
 
 #header #header-content #header-content-aside{ background:rgba(0,0,0,0.6);padding:2% 0;width:20%;}
 #header #header-content #header-content-aside ul{ position:relative;padding:0;}
-#header #header-content #header-content-aside li a{ display:block;font-size:1.1px;line-height:2;color:#fff;width:100%;text-align:left;padding:4% 10%;}
+#header #header-content #header-content-aside li a{ display:block;font-size:11px;line-height:2;color:#fff;width:100%;text-align:left;padding:4% 10%;}
 #header #header-content #header-content-aside li a span{ float:right;}
 #header #header-content #header-content-aside li a:hover{ background:#ff6700;text-decoration:none; }
 
@@ -79,7 +79,7 @@ li{ list-style:none;}
 #header #header-bottom #header-bottom-left ul li:hover{box-shadow:1px 1px 2px 1px;}
 #header #header-bottom #header-bottom-left ul li img{ width:100%;}
 #header #header-bottom #header-bottom-right{ margin-left:0.1%;}
-#header #header-bottom #header-bottom-right a img{ width:30%;margin-left:1.5%;transform:translate(0);transition:all .3s linear; }
+#header #header-bottom #header-bottom-right a img{ width:30%;margin-left:1.1%;transform:translate(0);transition:all .3s linear; }
 #header #header-bottom #header-bottom-right a img:hover{  box-shadow:2px 2px 5px 3px #ccc;transform:translateY(-4px);}
 
 /*头部脚部*/
